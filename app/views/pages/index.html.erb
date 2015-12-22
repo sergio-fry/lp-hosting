@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Form title</th>
+      <th>Button text</th>
+      <th>Body</th>
+      <th>Mailchimp api key</th>
+      <th>Mailchimp list</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pages.each do |page| %>
+      <tr>
+        <td><%= page.title %></td>
+        <td><%= page.subtitle %></td>
+        <td><%= page.form_title %></td>
+        <td><%= page.button_text %></td>
+        <td><%= page.body %></td>
+        <td><%= page.mailchimp_api_key %></td>
+        <td><%= page.mailchimp_list_id %></td>
+        <td><%= link_to 'Show', page %></td>
+        <td><%= link_to 'Edit', edit_page_path(page) %></td>
+        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Page', new_page_path %>

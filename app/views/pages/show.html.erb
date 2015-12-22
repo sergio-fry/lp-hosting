@@ -1,0 +1,46 @@
+<center>
+
+  <div style="background: url('http://dfsm9194vna0o.cloudfront.net/665339-0-314213.jpg'); color: white; width: 100%; padding: 30px">
+
+    <p id="notice"><%= notice %></p>
+
+    <h1>
+      <%= @page.title %>
+    </h1>
+
+    <p>
+    <%= @page.subtitle %>
+    </p>
+    <br />
+
+
+    <div style="background: white; color: black; max-width: 440px">
+      <h2><%= @page.form_title %></h2>
+
+      <form class="form">
+        <div class="form-group">
+          <input type="text" placeholder="Ваше имя" class="form-control" />
+        </div>
+
+        <div class="form-group">
+          <input type="email" placeholder="Email" class="form-control" />
+        </div>
+        
+        <div class="form-group">
+          <input type="submit" value="<%= @page.button_text %>" class="btn btn-lg btn-primary" />
+        </div>
+      </form>
+    </div>
+
+
+  </div>
+
+  <p>
+  <%= raw @page.body %>
+  </p>
+
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>
+
+</center>
